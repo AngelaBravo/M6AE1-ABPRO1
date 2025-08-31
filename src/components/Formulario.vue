@@ -1,5 +1,6 @@
 <template>
     <form @submit.prevent="resetearSubmit">
+        <p>Por favor completa todos los datos {{ nombre }}</p>
         <input v-model="nombre" type="text" class="form-control mb-3" placeholder="Nombre">
         <input v-model="email" type="email" class="form-control mb-3" id="exampleInputEl1" placeholder="E-mail">
         <input v-model="edad" type="text" class="form-control mb-3" placeholder="Edad">
