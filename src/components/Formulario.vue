@@ -40,9 +40,6 @@ function mostrarResumenFormulario() {
 }
 
 function resetearFormulario() {
-    mostrarResumen.value = false;
-    nombre.value = '';
-    email.value = '';
-    edad.value = '';
+    mostrarResumen.value = false; // aquí se podría ocupar el v-else?
 }
 </script>
