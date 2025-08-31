@@ -1,6 +1,4 @@
 <script setup>
-// import HelloWorld from './components/HelloWorld.vue'
-// import TheWelcome from './components/TheWelcome.vue'
 import Head from './components/Head.vue';
 import Formulario from './components/Formulario.vue';
 </script>
@@ -14,7 +12,6 @@ import Formulario from './components/Formulario.vue';
   </header>
 
   <main>
-    <!-- <TheWelcome /> -->
      <Formulario />
   </main>
 </template>

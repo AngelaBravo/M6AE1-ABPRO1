@@ -3,10 +3,11 @@
         <input v-model="nombre" type="text" class="form-control mb-3" placeholder="Nombre">
         <input v-model="email" type="email" class="form-control mb-3" id="exampleInputEl1" placeholder="E-mail">
         <input v-model="edad" type="text" class="form-control mb-3" placeholder="Edad">
-        <button type="submit" class="btn btn-primary">Submit</button>
-        
+        <button type="submit" class="btn btn-primary" v-on:click="mostrarResumenFormulario">Submit</button>
+        <button type="button" class="btn btn-outline-dark mx-5" @click="resetearFormulario">Limpiar Información</button>
+
         <slot name="resumen" v-if="mostrarResumen">
-            <h3 class="mt-4" >Resumen</h3>
+            <h3 class="mt-4">Resumen</h3>
             <p>Nombre: {{ nombreResumen }}</p>
             <p>Email: {{ emailResumen }}</p>
             <p>Edad: {{ edadResumen }}</p>
@@ -27,13 +28,20 @@ const nombreResumen = ref('');
 const emailResumen = ref('');
 const edadResumen = ref('');
 
-function resetearSubmit() {
+function mostrarResumenFormulario() {
     nombreResumen.value = nombre.value;
     emailResumen.value = email.value;
     edadResumen.value = edad.value;
     mostrarResumen.value = true;
-  nombre.value = '';
-  email.value = '';
-  edad.value = '';
+    nombre.value = '';
+    email.value = '';
+    edad.value = '';
+}
+
+function resetearFormulario() {
+    mostrarResumen.value = false;
+    nombre.value = '';
+    email.value = '';
+    edad.value = '';
 }
 </script>
