@@ -1,21 +1,24 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import TheWelcome from './components/TheWelcome.vue'
+import Head from './components/Head.vue';
+import Formulario from './components/Formulario.vue';
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
+    <img alt="Vue logo" class="logo" src="./assets/Favicon3.jpg" height="125" />
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <Head msg="M6AE1-ABPRO1" />
     </div>
   </header>
 
   <main>
-    <TheWelcome />
+    <!-- <TheWelcome /> -->
+     <Formulario />
   </main>
 </template>
+
 
 <style scoped>
 header {
